@@ -31,8 +31,8 @@ Pour lancer les tests unitaires : `npm test`.
 
 Le site définit des titres, descriptions et URL canoniques pour les pages indexables. Le workflow GitHub Pages renseigne `PUBLIC_SITE_URL` ; cette valeur alimente aussi `robots.txt` et le sitemap XML.
 
-Après publication sur `https://lemuelbagnan40-lab.github.io/schoolweb/`, ajoute cette adresse comme propriété de préfixe d'URL dans [Google Search Console](https://search.google.com/search-console), puis vérifie la propriété en suivant la méthode proposée par Google. Dans **Sitemaps**, soumets `https://lemuelbagnan40-lab.github.io/schoolweb/sitemap.xml`. Tu peux ensuite utiliser l'inspection d'URL pour demander l'exploration de la page d'accueil et des pages importantes. La soumission aide Google à découvrir les URL, sans garantir leur indexation ni son délai.
+Après publication sur `https://lemuelbagnan40-lab.github.io/codecraft/`, ajoute cette adresse comme propriété de préfixe d'URL dans [Google Search Console](https://search.google.com/search-console), puis vérifie la propriété en suivant la méthode proposée par Google. Dans **Sitemaps**, soumets `https://lemuelbagnan40-lab.github.io/codecraft/sitemap.xml`. Tu peux ensuite utiliser l'inspection d'URL pour demander l'exploration de la page d'accueil et des pages importantes. La soumission aide Google à découvrir les URL, sans garantir leur indexation ni son délai.
 
 ## Déploiement GitHub Pages
 
-Le workflow `.github/workflows/deploy-pages.yml` construit et publie le site à chaque push sur `main`, avec les URL canoniques, `robots.txt` et le sitemap sous `https://lemuelbagnan40-lab.github.io/schoolweb/`. La source Pages doit être **GitHub Actions** dans **Settings → Pages → Build and deployment**.
+Le workflow `.github/workflows/deploy-pages.yml` construit et publie le site à chaque push sur `main`, avec les URL canoniques, `robots.txt` et le sitemap sous `https://lemuelbagnan40-lab.github.io/codecraft/`. La source Pages doit être **GitHub Actions** dans **Settings → Pages → Build and deployment**.
