@@ -1,7 +1,7 @@
 <script>
   import { SITE_BASE, SITE_URL } from '$lib/site-config.js';
   let { title, description, path, noindex = false } = $props();
-  const siteName = 'schoolweb';
+  const siteName = 'CodeCraft';
   const canonical = $derived(SITE_URL && path ? `${SITE_URL}${SITE_BASE}${path.endsWith('/') ? path : `${path}/`}` : null);
 </script>
 

@@ -45,7 +45,7 @@
   }
 </script>
 
-<SeoHead title={`${lesson.title} : cours ${lesson.courseId === 'javascript' ? 'JavaScript' : lesson.courseId.toUpperCase()} — schoolweb`} description={lesson.introduction} path={`/cours/${lesson.courseId}/lecons/${lesson.slug}`} />
+<SeoHead title={`${lesson.title} : cours ${lesson.courseId === 'javascript' ? 'JavaScript' : lesson.courseId.toUpperCase()} — CodeCraft`} description={lesson.introduction} path={`/cours/${lesson.courseId}/lecons/${lesson.slug}`} />
 
 <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href={sitePath('/cours')}>Cours</a><span aria-hidden="true">/</span><a href={sitePath(`/cours/${lesson.courseId}`)}>{lesson.courseId === 'javascript' ? 'JavaScript' : lesson.courseId.toUpperCase()}</a><span aria-hidden="true">/</span><span aria-current="page">{lesson.title}</span></nav>
 <div class="lesson-layout">

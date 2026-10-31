@@ -30,8 +30,8 @@
   }
 </script>
 
-<SeoHead title="Recherche — schoolweb" description="Recherche dans les parcours, leçons, exercices et références schoolweb." noindex />
-<header class="search-heading"><span class="eyebrow">RECHERCHER DANS WEBSCHOOL</span><h1>Résultats de recherche</h1>{#if data.query}<p>Pour « {data.query} »</p>{:else}<p>Recherche dans les parcours, les leçons et les références.</p>{/if}</header>
+<SeoHead title="Recherche — CodeCraft" description="Recherche dans les parcours, leçons, exercices et références CodeCraft." noindex />
+<header class="search-heading"><span class="eyebrow">RECHERCHER DANS CODECRAFT</span><h1>Résultats de recherche</h1>{#if data.query}<p>Pour « {data.query} »</p>{:else}<p>Recherche dans les parcours, les leçons et les références.</p>{/if}</header>
 <form class="search-form" action={sitePath('/recherche')} method="get" role="search"><label for="search-page-query">Notion à rechercher</label><div class="query-row"><input id="search-page-query" name="q" type="search" value={data.query} placeholder="Ex. : flex, tableau, addEventListener" /><button type="submit">Rechercher</button>{#if data.query}<a href={sitePath('/recherche')} aria-label="Effacer la recherche">Effacer</a>{/if}</div></form>
 {#if data.query.trim()}
   <div class="filters"><label for="technology-filter">Technologie<select id="technology-filter" bind:value={technology}>{#each technologies as item}<option value={item.id}>{item.label}</option>{/each}</select></label><label for="type-filter">Type de contenu<select id="type-filter" bind:value={type}>{#each types as item}<option value={item.id}>{item.label}</option>{/each}</select></label><p class="result-count" role="status">{results.length} résultat{results.length === 1 ? '' : 's'}</p></div>

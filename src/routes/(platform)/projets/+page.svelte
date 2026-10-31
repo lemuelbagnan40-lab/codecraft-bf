@@ -35,7 +35,7 @@
   function stateFor(id) { return summary?.projects.find((entry) => entry.id === id); }
 </script>
 
-<SeoHead title="Projets pratiques HTML, CSS et JavaScript — schoolweb" description="Mets en pratique HTML, CSS et JavaScript avec des projets guidés et un suivi local de ta progression." path="/projets" />
+<SeoHead title="Projets pratiques HTML, CSS et JavaScript — CodeCraft" description="Mets en pratique HTML, CSS et JavaScript avec des projets guidés et un suivi local de ta progression." path="/projets" />
 
 <section class="projects-hero">
   <div class="hero-copy"><span class="eyebrow">APPRENDRE EN CONSTRUISANT</span><h1>Transforme tes connaissances en <em>vrais projets.</em></h1><p>Assemble les notions HTML, CSS et JavaScript pour créer des choses concrètes, à ton rythme et étape par étape.</p><div class="hero-actions"><a class="primary-button" href="#catalogue">Explorer les projets <span aria-hidden="true">→</span></a><a class="quiet-link" href={sitePath(resumeHref)}>Reprendre ma dernière leçon</a></div></div>

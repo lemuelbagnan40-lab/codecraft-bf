@@ -33,7 +33,7 @@
   }
 </script>
 
-<SeoHead title="Ma progression — schoolweb" description="Consulte le suivi de tes leçons sur cet appareil." noindex />
+<SeoHead title="Ma progression — CodeCraft" description="Consulte le suivi de tes leçons sur cet appareil." noindex />
 <header class="page-heading"><span class="eyebrow">TON CHEMIN, À TON RYTHME</span><h1>Ma progression</h1><p>Le suivi est enregistré dans le stockage local de ce navigateur. Tes leçons commencées et terminées restent sur cet appareil.</p></header>
 {#if summary}
   <section class="progress-card"><div class="progress-top"><div><span class="eyebrow">LEÇONS TERMINÉES</span><h2>{summary.totals.completed} / {summary.totals.lessons}</h2></div><span class="progress-percent">{summary.percent}%</span></div><div class="progress-track" role="progressbar" aria-label="Progression globale" aria-valuemin="0" aria-valuemax="100" aria-valuenow={summary.percent}><span style={`width:${summary.percent}%`}></span></div><p>{summary.totals.started} leçons commencées · {summary.totals.notStarted} à découvrir</p></section>

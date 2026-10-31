@@ -1,4 +1,4 @@
-name: Deploy schoolweb to GitHub Pages
+name: Deploy CodeCraft to GitHub Pages
 
 on:
   push:

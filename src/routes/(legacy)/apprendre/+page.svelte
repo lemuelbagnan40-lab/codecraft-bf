@@ -158,7 +158,7 @@
 </script>
 
 <svelte:head>
-  <title>Ateliers interactifs HTML, CSS et JavaScript â€” schoolweb</title>
+  <title>Ateliers interactifs HTML, CSS et JavaScript — CodeCraft</title>
   <meta name="description" content="Essaie les ateliers interactifs HTML, CSS et JavaScript avec des exemples modifiables et un aperÃ§u en direct." />
   <meta name="robots" content="noindex, follow" />
 </svelte:head>
@@ -166,7 +166,7 @@
 <div class="site-shell">
   <a class="skip-link" href="#accueil">Aller au contenu</a>
   <header class="topbar">
-    <a class="brand" href={sitePath('/')} aria-label="schoolweb, accueil"><img class="brand-mark" src={sitePath('/logo-webschool.svg')} alt="" /><span class="brand-name">schoolweb<small>APPRENDRE EN PRATIQUANT</small></span></a>
+    <a class="brand" href={sitePath('/')} aria-label="CodeCraft, accueil"><img class="brand-mark" src={sitePath('/logo-webschool.svg')} alt="" /><span class="brand-name">CodeCraft<small>APPRENDRE EN PRATIQUANT</small></span></a>
     <nav class="top-links" aria-label="Cours principaux">
       {#each courses as item}<button class:chosen={activeCourse === item.id} aria-pressed={activeCourse === item.id} onclick={() => selectCourse(item.id)}>{item.name}</button>{/each}
     </nav>
@@ -222,7 +222,7 @@
       <section class="quiz-card"><div class="quiz-title"><span class="quiz-mark">?</span><div><span class="eyebrow">VÃ‰RIFIE TES CONNAISSANCES</span><h3>Question rapide</h3></div></div><p>{quiz.question}</p><div class="quiz-options">{#each quiz.options as option, index}<button class:correct={quizChoice === index && index === quiz.answer} class:incorrect={quizChoice === index && index !== quiz.answer} onclick={() => answerQuiz(index)}>{option}<span>{quizChoice === index ? (index === quiz.answer ? 'âœ“' : 'â†»') : 'â—‹'}</span></button>{/each}</div>{#if quizMessage}<p class:success={quizChoice === quiz.answer} class="quiz-feedback" role="status">{quizMessage}</p>{/if}</section>
 
       {#if notice}<div class="toast" role="status">âœ“ {notice}</div>{/if}
-      <footer><span>Fait pour apprendre, une ligne Ã  la fois.</span><span>schoolweb <b>Â·</b> Cours gratuits <b>Â·</b> Tél&nbsp;: <a href="tel:66913322">66913322</a> / <a href="tel:73308997">73308997</a></span></footer>
+      <footer><span>Fait pour apprendre, une ligne Ã  la fois.</span><span>CodeCraft <b>Â·</b> Cours gratuits <b>Â·</b> Tél&nbsp;: <a href="tel:66913322">66913322</a> / <a href="tel:73308997">73308997</a></span></footer>
     </main>
   </div>
 </div>

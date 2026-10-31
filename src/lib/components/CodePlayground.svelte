@@ -139,7 +139,7 @@
   <div class="preview-heading"><h3>Résultat</h3><span>Exécution isolée</span></div>
   {#if runtimeError}<p class="runtime-error" role="alert"><strong>Erreur JavaScript :</strong> {runtimeError}</p>{/if}
   <iframe bind:this={preview} title={`Résultat de l’exemple : ${title}`} sandbox="allow-scripts" referrerpolicy="no-referrer" srcdoc={executedDocument}></iframe>
-  <p class="sandbox-note">Cet exemple s’exécute dans une iframe isolée. Il ne peut pas lire les données de schoolweb ni soumettre un formulaire.</p>
+  <p class="sandbox-note">Cet exemple s’exécute dans une iframe isolée. Il ne peut pas lire les données de CodeCraft ni soumettre un formulaire.</p>
 </section>
 
 <style>

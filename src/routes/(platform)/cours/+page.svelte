@@ -4,7 +4,7 @@
   import { learningPaths } from '$lib/data/catalog.js';
 </script>
 
-<SeoHead title="Cours HTML, CSS et JavaScript — schoolweb" description="Explore les parcours WebLearn : des cours progressifs de HTML, CSS et JavaScript avec notions, exemples et exercices." path="/cours" />
+<SeoHead title="Cours HTML, CSS et JavaScript — CodeCraft" description="Explore les parcours WebLearn : des cours progressifs de HTML, CSS et JavaScript avec notions, exemples et exercices." path="/cours" />
 
 <header class="page-heading"><span class="eyebrow">APPRENDRE À TON RYTHME</span><h1>Les parcours</h1><p>Chaque parcours part des bases et avance vers des notions plus solides. Commence par celui qui t’intéresse le plus.</p></header>
 <section class="catalog-list" aria-label="Parcours disponibles">

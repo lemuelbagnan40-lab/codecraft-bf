@@ -36,9 +36,9 @@
 <div class="platform-shell" data-theme={theme}>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="topbar">
-    <a class="brand" href={sitePath('/')} aria-label="schoolweb, accueil">
+    <a class="brand" href={sitePath('/')} aria-label="CodeCraft, accueil">
       <img class="brand-mark" src={`${base}/logo-webschool.svg`} alt="" />
-      <span class="brand-name">schoolweb<small>APPRENDRE EN PRATIQUANT</small></span>
+      <span class="brand-name">CodeCraft<small>APPRENDRE EN PRATIQUANT</small></span>
     </a>
 
     <GlobalSearch />
@@ -89,7 +89,7 @@
   </div>
 
   <footer class="site-footer">
-    <a class="footer-brand" href={sitePath('/')}>schoolweb</a>
+    <a class="footer-brand" href={sitePath('/')}>CodeCraft</a>
     <span>Une notion à la fois, un exemple après l’autre.</span>
     <div class="footer-contact">
       <span>Tél&nbsp;:</span>

@@ -6,7 +6,7 @@
   const firstProject = projects.find((project) => project.status === 'available');
 </script>
 
-<SeoHead title="Apprendre HTML, CSS et JavaScript par la pratique — schoolweb" description="Découvre des parcours HTML, CSS et JavaScript avec des leçons, exemples interactifs, exercices et projets pratiques." path="/" />
+<SeoHead title="Apprendre HTML, CSS et JavaScript par la pratique — CodeCraft" description="Découvre des parcours HTML, CSS et JavaScript avec des leçons, exemples interactifs, exercices et projets pratiques." path="/" />
 
 <section class="welcome">
   <div class="welcome-copy">

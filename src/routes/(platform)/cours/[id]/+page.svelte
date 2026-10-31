@@ -5,7 +5,7 @@
   let { path, modules, lessonCounts, detailedLessonCount, legacyLessonCounts, legacyLessons } = $derived(data);
 </script>
 
-<SeoHead title={`Cours ${path.title} : ${path.subtitle} — schoolweb`} description={path.description} path={`/cours/${path.id}`} />
+<SeoHead title={`Cours ${path.title} : ${path.subtitle} — CodeCraft`} description={path.description} path={`/cours/${path.id}`} />
 
 <a class="back-link" href={sitePath('/cours')}>â† Tous les parcours</a>
 <header class="course-hero" style={`--course-color:${path.color}`}>
