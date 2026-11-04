@@ -1,5 +1,3 @@
-import { env } from '$env/dynamic/public';
-
 function configuredOrigin(value) {
   if (!value) return null;
   try {
@@ -11,7 +9,8 @@ function configuredOrigin(value) {
   }
 }
 
-export const SITE_URL = configuredOrigin(env.PUBLIC_SITE_URL);
-export const SITE_BASE = env.PUBLIC_BASE_PATH?.replace(/^\/+|\/+$/g, '')
-  ? `/${env.PUBLIC_BASE_PATH.replace(/^\/+|\/+$/g, '')}`
-  : '';
+const env = import.meta.env ?? {};
+const baseUrl = env.BASE_URL ?? '/';
+
+export const SITE_URL = configuredOrigin(env.VITE_SITE_URL);
+export const SITE_BASE = baseUrl === '/' ? '' : baseUrl.replace(/\/+$/g, '');

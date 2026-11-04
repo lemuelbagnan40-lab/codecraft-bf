@@ -1,4 +1,4 @@
-import { base } from '$app/paths';
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/g, '');
 
 export function sitePath(path) {
   if (!path || !path.startsWith('/') || path.startsWith('//')) return path;
