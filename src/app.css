@@ -265,3 +265,7 @@ button:not(:disabled) { cursor: pointer; }
     transition-duration: 0.01ms !important;
   }
 }
+
+@media (max-width: 320px) {
+  html, body { min-width: 0; }
+}
