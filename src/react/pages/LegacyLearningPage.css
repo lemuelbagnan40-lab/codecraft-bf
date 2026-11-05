@@ -157,3 +157,9 @@
   .legacy-level-options button{align-items:center;flex-direction:row}
   .legacy-welcome-banner{padding:18px}
 }
+@media(max-width:700px){
+  .legacy-shell{overflow-x:clip}
+  .legacy-level-selector,.legacy-level-options{width:100%;min-width:0}
+  .legacy-level-options{grid-template-columns:minmax(0,1fr)}
+  .legacy-level-options button{width:100%;min-width:0;align-items:center;flex-direction:row;justify-content:space-between}
+}
