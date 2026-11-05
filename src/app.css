@@ -29,6 +29,10 @@
   --radius-small: 7px;
   --radius-medium: 11px;
   --radius-large: 16px;
+  --break-sm: 640px;
+  --break-md: 768px;
+  --break-lg: 1024px;
+  --break-xl: 1280px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;

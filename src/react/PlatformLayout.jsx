@@ -105,7 +105,13 @@ export default function PlatformLayout({ children }) {
       </header>
 
       {menuOpen && (
-        <nav id="mobile-navigation" className="mobile-navigation" aria-label="Navigation mobile">
+        <>
+          <div
+            className={`mobile-backdrop${menuOpen ? ' shown' : ''}`}
+            onClick={() => setMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <nav id="mobile-navigation" className="mobile-navigation" aria-label="Navigation mobile">
           <NavigationLink path="/cours" currentPath={currentPath} onClick={() => setMenuOpen(false)}>
             Cours HTML, CSS et JavaScript
           </NavigationLink>
@@ -113,6 +119,7 @@ export default function PlatformLayout({ children }) {
           <NavigationLink path="/reference" currentPath={currentPath} onClick={() => setMenuOpen(false)}>Références</NavigationLink>
           <NavigationLink path="/progression" currentPath={currentPath} onClick={() => setMenuOpen(false)}>Ma progression</NavigationLink>
         </nav>
+        </>
       )}
 
       <div className="workspace">
