@@ -123,7 +123,15 @@ button:not(:disabled) { cursor: pointer; }
 .platform-shell .lesson-content h1 { max-width: 22ch; }
 .platform-shell .lesson-content .lesson-section { margin-block: 38px; }
 .platform-shell .lesson-content :is(.lesson-section, .example-section, .exercises-section) h2 { font-size: 22px; line-height: 1.35; }
-.platform-shell .lesson-section pre { padding: 16px 18px; border-radius: 8px; font-size: 13px; line-height: 1.75; }
+.platform-shell :is(.lesson-section, .example-section) pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 16px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.75;
+  -webkit-overflow-scrolling: touch;
+}
 .platform-shell :is(.learning-goals, .summary) { padding: 20px 22px; border-radius: 9px; }
 .platform-shell .callout { border-left: 3px solid var(--accent); border-radius: 3px 8px 8px 3px; }
 .platform-shell .page-content .exercise-card { padding: 21px; border-radius: 10px; }
@@ -169,8 +177,8 @@ button:not(:disabled) { cursor: pointer; }
   font-size: 15px;
   line-height: 1.8;
 }
-.platform-shell :is(.lesson-section pre, .editor-panel textarea, .code-answer) { max-width: 100%; }
-.platform-shell :is(.lesson-section pre, .editor-panel textarea) { scrollbar-color: #9aa99c transparent; }
+.platform-shell :is(.lesson-section pre, .example-section pre, .editor-panel textarea, .code-answer) { max-width: 100%; }
+.platform-shell :is(.lesson-section pre, .example-section pre, .editor-panel textarea) { scrollbar-color: #9aa99c transparent; }
 .platform-shell :is(.learning-goals li, .summary li) { font-size: 13px; }
 
 .platform-shell[data-theme="dark"] .page-content :is(
@@ -214,6 +222,7 @@ button:not(:disabled) { cursor: pointer; }
 }
 
 .platform-shell[data-theme="dark"] .project-invitation { border-color: var(--line); background: #222e25; }
+.platform-shell[data-theme="dark"] .example-section pre { border-color: var(--line); background: var(--surface); color: var(--ink); }
 .platform-shell[data-theme="dark"] .project-invitation h2 { color: var(--text); }
 .platform-shell[data-theme="dark"] .project-invitation-meta span { border-color: var(--line); background: var(--surface-raised); color: var(--text-soft); }
 .platform-shell[data-theme="dark"] .project-invitation-actions > a:last-child { color: var(--accent); }
@@ -240,7 +249,7 @@ button:not(:disabled) { cursor: pointer; }
 @media (max-width: 700px) {
   html { scroll-padding-top: 70px; }
   .platform-shell .page-content { overflow-wrap: anywhere; }
-  .platform-shell :is(.lesson-section pre, .editor-panel textarea) { font-size: 13px; }
+  .platform-shell :is(.lesson-section pre, .example-section pre, .editor-panel textarea) { font-size: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
