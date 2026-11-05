@@ -29,16 +29,12 @@ function resumeHref(course) {
 export default function ProgressPage() {
   const [summary, setSummary] = useState(null);
   const [projectSummary, setProjectSummary] = useState(null);
-  const [lastActivity, setLastActivity] = useState(null);
 
   useEffect(() => {
     function refresh() {
       const progress = readProgress();
       setSummary(getProgressSummary(progress));
       setProjectSummary(getProjectProgressSummary(progress));
-      if (progress.lastLessonId) {
-        setLastActivity(progress.lastLessonId);
-      }
     }
     refresh();
     window.addEventListener(PROGRESS_EVENT, refresh);
@@ -126,4 +122,3 @@ export default function ProgressPage() {
     </>
   );
 }
-

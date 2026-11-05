@@ -18,16 +18,14 @@ function lessonHref(lesson) {
 
 export default function HomePage() {
   const [lastLesson, setLastLesson] = useState(null);
-  const [lastCourse, setLastCourse] = useState(null);
 
   useEffect(() => {
     function refresh() {
       const progress = readProgress();
       for (const course of learningPaths) {
-        const lesson = getCourseLastLesson(course.id);
+        const lesson = getCourseLastLesson(course.id, progress);
         if (lesson) {
           setLastLesson(lesson);
-          setLastCourse(course);
           break;
         }
       }
@@ -132,4 +130,3 @@ export default function HomePage() {
     </>
   );
 }
-

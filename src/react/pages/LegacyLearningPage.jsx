@@ -65,15 +65,26 @@ export default function LegacyLearningPage() {
   const lesson = course.lessons[lessonIndex];
   const lessonsForLevel = course.lessons.map((entry, index) => ({ ...entry, index })).filter((entry) => entry.level === activeLevel);
   const lessonPosition = lessonsForLevel.findIndex((entry) => entry.index === lessonIndex);
-  const flatLessons = courses.flatMap((item) => item.lessons.map((entry, index) => ({ ...entry, courseId: item.id, index })));
-  const filteredLessons = flatLessons.filter((item) => item.title.toLocaleLowerCase('fr').includes(query.toLocaleLowerCase('fr')) || item.courseId.includes(query.toLocaleLowerCase('fr')));
+  const flatLessons = useMemo(
+    () => courses.flatMap((item) => item.lessons.map((entry, index) => ({ ...entry, courseId: item.id, index }))),
+    []
+  );
+  const normalizedQuery = query.toLocaleLowerCase('fr');
+  const filteredLessons = useMemo(
+    () => flatLessons.filter((item) =>
+      item.title.toLocaleLowerCase('fr').includes(normalizedQuery) ||
+      item.courseId.includes(normalizedQuery) ||
+      (courses.find((courseItem) => courseItem.id === item.courseId)?.name.toLocaleLowerCase('fr') ?? '').includes(normalizedQuery)
+    ),
+    [flatLessons, normalizedQuery]
+  );
   const progress = Math.round((completed.length / flatLessons.length) * 100);
   const lessonsAtLevel = flatLessons.filter((item) => item.level === activeLevel);
   const completedAtLevel = lessonsAtLevel.filter((item) => completed.includes(lessonId(item.courseId, item))).length;
   const levelProgress = lessonsAtLevel.length ? Math.round((completedAtLevel / lessonsAtLevel.length) * 100) : 0;
   const quiz = quizzes[activeCourse];
   const currentLessonId = lessonId(activeCourse, lesson);
-  const previewDoc = createPreview(activeCourse, code);
+  const previewDoc = useMemo(() => createPreview(activeCourse, code), [activeCourse, code]);
 
   useEffect(() => {
     try {

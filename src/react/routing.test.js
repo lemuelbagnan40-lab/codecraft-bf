@@ -29,3 +29,11 @@ test('returns not-found for unknown and incomplete paths', () => {
   assert.equal(resolveRoute('/cours/unknown/lecons').name, 'not-found');
   assert.equal(resolveRoute('/unknown').name, 'not-found');
 });
+
+test('returns not-found instead of throwing for malformed encoded paths', () => {
+  assert.deepEqual(resolveRoute('/cours/%E0%A4%A'), {
+    name: 'not-found',
+    params: {},
+    search: ''
+  });
+});

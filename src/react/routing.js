@@ -5,7 +5,12 @@ export function resolveRoute(pathname, search = '') {
     ? pathname.slice(basePath.length) || '/'
     : pathname;
   const normalizedPath = path.replace(/\/+$/g, '') || '/';
-  const segments = normalizedPath.split('/').filter(Boolean).map(decodeURIComponent);
+  let segments;
+  try {
+    segments = normalizedPath.split('/').filter(Boolean).map(decodeURIComponent);
+  } catch {
+    return { name: 'not-found', params: {}, search };
+  }
 
   if (segments.length === 0) return { name: 'home', params: {}, search };
   if (segments[0] === 'cours' && segments.length === 1) return { name: 'courses', params: {}, search };
