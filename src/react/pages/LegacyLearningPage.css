@@ -139,3 +139,21 @@
 .legacy-footer a{color:inherit;text-decoration:none}
 @media(max-width:950px){.legacy-topbar{gap:16px;padding-inline:18px}.legacy-layout{grid-template-columns:220px minmax(0,1fr)}.legacy-main-content{padding-inline:22px}.legacy-level-selector{align-items:flex-start;flex-direction:column}.legacy-learning-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.legacy-topbar{height:60px;padding:0 13px}.legacy-brand{min-width:0;font-size:13px}.legacy-brand img{width:33px;height:33px}.legacy-brand small,.legacy-top-links{display:none}.legacy-menu-toggle{display:block}.legacy-layout{display:block}.legacy-sidebar{position:fixed;z-index:8;top:60px;bottom:0;left:0;width:min(300px,88vw);height:auto;min-height:0;transform:translateX(-105%);transition:transform .18s;box-shadow:12px 0 24px #17251b14}.legacy-sidebar.mobile-open{transform:translateX(0)}.legacy-main-content{padding:17px 14px}.legacy-welcome-banner{padding:22px}.legacy-banner-art{display:none}.legacy-course-overview{align-items:flex-start;flex-direction:column}.legacy-course-tabs{overflow:auto}.legacy-course-tabs button{white-space:nowrap}.legacy-lesson-heading{flex-direction:column}.legacy-footer{flex-direction:column}.legacy-level-options{display:grid;width:100%;grid-template-columns:repeat(3,minmax(0,1fr))}.legacy-level-options button{min-width:0;align-items:flex-start;flex-direction:column;gap:3px;padding:8px}.legacy-quiz-options button{flex:1}}
+@media(max-width:700px){
+  .legacy-main-content{overflow-wrap:anywhere}
+  .legacy-breadcrumb,.legacy-banner-meta,.legacy-lesson-kicker{flex-wrap:wrap;line-height:1.5}
+  .legacy-course-tabs{max-width:100%;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .legacy-course-overview>div,.legacy-lesson-heading>div,.legacy-learning-grid>*{min-width:0}
+  .legacy-path-progress>div:first-child{flex-wrap:wrap}
+  .legacy-lesson-heading button{max-width:100%;white-space:normal}
+  .legacy-lesson-navigation{flex-wrap:wrap}
+  .legacy-playground-head,.legacy-editor-label,.legacy-playground>p{flex-wrap:wrap;gap:8px}
+  .legacy-editor-label small{margin-left:0}
+  .legacy-playground textarea{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .legacy-quiz-options button{min-width:0;overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+  .legacy-level-options{grid-template-columns:1fr}
+  .legacy-level-options button{align-items:center;flex-direction:row}
+  .legacy-welcome-banner{padding:18px}
+}
