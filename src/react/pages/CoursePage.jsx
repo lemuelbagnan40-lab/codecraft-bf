@@ -47,7 +47,7 @@ export default function CoursePage({ params }) {
               <span>{module.lessons.length} leçon{module.lessons.length > 1 ? 's' : ''}</span>
               <h3>{module.title}</h3>
               <ul>{module.lessons.map((lesson) => (
-                <li key={lesson.id}><a href={sitePath(`/cours/${path.id}/lecons/${lesson.slug}`)}>{lesson.title}<span aria-hidden="true">→</span></a></li>
+                <li key={lesson.id}><a href={sitePath(`/cours/${path.id}/lecons/${lesson.slug}`)}><span className="module-lesson-title">{lesson.title}</span><span aria-hidden="true">→</span></a></li>
               ))}</ul>
             </article>
           ))}
